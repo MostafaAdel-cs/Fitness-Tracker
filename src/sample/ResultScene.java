@@ -111,14 +111,21 @@ private Activity[] sortActivities(Activity[] activities)
     {
         for(j=0;j<4-pass;j++)
         {
-            if(activities[j].getCaloriesBurnt()<=activities[j+1].getCaloriesBurnt())
-            {
-                if(activities[j].getHeartRateIncOfActivity()<activities[j+1].getHeartRateIncOfActivity()) {
+             if(activities[j].getCaloriesBurnt()<=activities[j+1].getCaloriesBurnt())
+                {
                     temp = activities[j];
                     activities[j] = activities[j + 1];
                     activities[j + 1] = temp;
+
+
+                    if((activities[j].getCaloriesBurnt()<=activities[j+1].getCaloriesBurnt())&&(activities[j].getHeartRateIncOfActivity()<activities[j+1].getHeartRateIncOfActivity()))
+                    {
+                        temp = activities[j];
+                        activities[j] = activities[j + 1];
+                        activities[j + 1] = temp;
+                    }
+
                 }
-            }
 
 
         }
