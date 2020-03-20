@@ -16,6 +16,7 @@ public class ResultScene {
 
     public void makeStage(Double heartRate, Double calories, Activity[] activities)
     {
+        DecimalFormat d=new DecimalFormat();
         Stage finalStage=new Stage();
         Scene finalScene;
         finalStage.initModality(Modality.APPLICATION_MODAL);
@@ -25,8 +26,8 @@ public class ResultScene {
         finalBox.setPadding(new Insets(10));
 
 
-        Label totalCalories=new Label("Total Calories Burnt = "+calories+" calorie");
-        Label totalHeartRate=new Label("Total Heart Rate = "+heartRate+" beat/min");
+        Label totalCalories=new Label("Total Calories Burnt = "+d.format(calories)+" calorie");
+        Label totalHeartRate=new Label("Total Heart Rate = "+d.format(heartRate)+" beat/min");
         totalCalories.setFont(Font.font(20));
         totalHeartRate.setFont(Font.font(20));
 
@@ -41,8 +42,8 @@ public class ResultScene {
 
 
         Label firstActivity=new Label("1."+activities[0].getName());
-        Label firstActivityCalories=new Label("Calories Burnt : "+activities[0].getCaloriesBurnt()+" calorie");
-        Label firstActivityHeartRate=new Label("Increase In Heart Rate : "+activities[0].getHeartRateIncOfActivity()+" beat/min");
+        Label firstActivityCalories=new Label("Calories Burnt : "+d.format(activities[0].getCaloriesBurnt())+" calorie");
+        Label firstActivityHeartRate=new Label("Increase In Heart Rate : "+d.format(activities[0].getHeartRateIncOfActivity())+" beat/min");
         firstActivity.setFont(Font.font(19));
         firstActivityCalories.setFont(Font.font(15));
         firstActivityHeartRate.setFont(Font.font(15));
@@ -50,24 +51,24 @@ public class ResultScene {
 
 
         Label secondActivity=new Label("2."+activities[1].getName());
-        Label secondActivityCalories=new Label("Calories Burnt : "+activities[1].getCaloriesBurnt()+" calorie");
-        Label secondActivityHeartRate=new Label("Increase In Heart Rate : "+activities[1].getHeartRateIncOfActivity()+" beat/min");
+        Label secondActivityCalories=new Label("Calories Burnt : "+d.format(activities[1].getCaloriesBurnt())+" calorie");
+        Label secondActivityHeartRate=new Label("Increase In Heart Rate : "+d.format(activities[1].getHeartRateIncOfActivity())+" beat/min");
         secondActivity.setFont(Font.font(19));
         secondActivityCalories.setFont(Font.font(15));
         secondActivityHeartRate.setFont(Font.font(15));
 
 
         Label thirdActivity=new Label("3."+activities[2].getName());
-        Label thirdActivityCalories=new Label("Calories Burnt : "+activities[2].getCaloriesBurnt()+" calorie");
-        Label thirdActivityHeartRate=new Label("Increase In Heart Rate : "+activities[2].getHeartRateIncOfActivity()+" beat/min");
+        Label thirdActivityCalories=new Label("Calories Burnt : "+d.format(activities[2].getCaloriesBurnt())+" calorie");
+        Label thirdActivityHeartRate=new Label("Increase In Heart Rate : "+d.format(activities[2].getHeartRateIncOfActivity())+" beat/min");
         thirdActivity.setFont(Font.font(19));
         thirdActivityCalories.setFont(Font.font(15));
         thirdActivityHeartRate.setFont(Font.font(15));
 
 
         Label fourthActivity=new Label("4."+activities[3].getName());
-        Label fourthActivityCalories=new Label("Calories Burnt : "+activities[3].getCaloriesBurnt()+" calorie");
-        Label fourthActivityHeartRate=new Label("Increase In Heart Rate : "+activities[3].getHeartRateIncOfActivity()+" beat/min");
+        Label fourthActivityCalories=new Label("Calories Burnt : "+d.format(activities[3].getCaloriesBurnt()) +" calorie");
+        Label fourthActivityHeartRate=new Label("Increase In Heart Rate : "+d.format(activities[3].getHeartRateIncOfActivity())+" beat/min");
         fourthActivity.setFont(Font.font(19));
         fourthActivityCalories.setFont(Font.font(15));
         fourthActivityHeartRate.setFont(Font.font(15));
